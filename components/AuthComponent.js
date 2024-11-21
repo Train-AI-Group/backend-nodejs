@@ -1,10 +1,37 @@
-import { createWallet } from 'arweavekit/wallet'
-exports.getWallet = (req, res) => {
-    const address = req.body.address;
-    if (!address) {
-    const wallet = createWallet({seedPhrase: true,
-        environment: 'local'});
-        // return res.status(400).json({ error: "Address is required" });
-    }
-    res.json({ address: address });
+const Arweave = require('arweave');
+const arweave = Arweave.init({
+  host: 'arweave.net',
+  port: 443,
+  protocol: 'https',
+});
+
+const uploadDataset = async (req, res) => {
+  const { walletAddress, privateKey, data } = req.body;
+
+  if (!walletAddress || !privateKey || !data) {
+    return res.status(400).json({ message: 'Wallet address, private key, and dataset are required.' });
+  }
+
+  try {
+    const arweaveKey = await arweave.wallets.jwkToAddress(privateKey);
+    const transaction = await arweave.createTransaction({ data }, arweaveKey);
+
+    transaction.addTag('Content-Type', 'text/plain');
+    transaction.addTag('Wallet-Address', walletAddress);
+
+    await arweave.transactions.sign(transaction, arweaveKey);
+    const response = await arweave.transactions.post(transaction);
+
+    console.log(`Transaction ID: ${transaction.id}`);
+
+    res.json({
+      message: 'Dataset successfully uploaded to Arweave.',
+      transactionId: transaction.id,
+    });
+  } catch (error) {
+    console.error('Error uploading dataset:', error);
+    res.status(500).json({ message: 'Failed to upload dataset to Arweave.' });
+  }
 };
+
+module.exports = { uploadDataset };
