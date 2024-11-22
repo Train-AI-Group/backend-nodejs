@@ -9,11 +9,11 @@ const arweave = Arweave.init({
 
 const uploadImageDataset = async (req, res) => {
     try {
-        const { walletAddress, privateKey, data, metadata } = req.body;
+        const { walletAddress, privateKey, data, field_of_study, domain, method, is_data_clean, dataset_name, image } = req.body;
 
-        if (!walletAddress || !privateKey || !data || !metadata) {
+        if (!walletAddress || !privateKey || !data || !field_of_study, domain, method, is_data_clean, dataset_name, image) {
             return res.status(400).send({
-                error: 'Missing walletAddress, privateKey, metadata, or data in request body',
+                error: 'Missing walletAddress, privateKey, field_of_study, domain, method, is_data_clean, dataset_name, image or data in request body',
             });
         }
 
@@ -37,6 +37,15 @@ const uploadImageDataset = async (req, res) => {
 
         await arweave.transactions.sign(transaction, wallet);
         const arweaveResponse = await arweave.transactions.post(transaction);
+
+        const dbConnection = getDatabaseConnection();
+        const transactionsCollection = dbConnection.collection("transactions");
+        const doc = await transactionsCollection.insertOne({ field_of_study, domain, method, is_data_clean, dataset_name, image })
+        console.log(doc);
+
+        if (!doc) return res.status(500).send({
+            error: 'Failed to add transaction to DB',
+        });
 
         return res.status(200).json({
             transactionId: transaction.id,

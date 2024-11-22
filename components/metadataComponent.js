@@ -1,4 +1,4 @@
-import { getDatabaseConnection } from "./../database/connect.js";
+import { getDatabaseConnection } from "../database/connect.js";
 
 const updateMetadata = async (req, res) => {
     console.log(req.body);
@@ -11,8 +11,8 @@ const updateMetadata = async (req, res) => {
 
     try {
         const dbConnection = getDatabaseConnection();
-        const datasetMetadatasCollection = dbConnection.collection("datasetMetadatas");
-        const { matchedCount, modifiedCount } = await datasetMetadatasCollection.updateOne({ transaction_id }, { $set: { field_of_study, domain, method, is_data_clean, dataset_name, image } });
+        const transactionsCollection = dbConnection.collection("transactions");
+        const { matchedCount, modifiedCount } = await transactionsCollection.updateOne({ transaction_id }, { $set: { field_of_study, domain, method, is_data_clean, dataset_name, image } });
         console.log(matchedCount, modifiedCount)
         if (!matchedCount || !modifiedCount) return res.status(500).send({
             error: 'Failed to update metadata',
