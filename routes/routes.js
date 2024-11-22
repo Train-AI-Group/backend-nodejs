@@ -1,7 +1,7 @@
 const express = require('express');
-const { uploadDataset } = require('../components/AuthComponent'); // Make sure to adjust the path if needed
+const { uploadDataset } = require('../components/AuthComponent');
 const router = express.Router();
 
-router.post('/upload', uploadDataset); // This handles POST requests to /auth/upload
+router.post('/upload', uploadDataset);
 
 module.exports = router;

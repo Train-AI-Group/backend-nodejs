@@ -6,7 +6,10 @@ const arweave = Arweave.init({
 });
 
 const uploadDataset = async (req, res) => {
-  const { walletAddress, privateKey, data } = req.body;
+  var { walletAddress, privateKey, data } = req.body;
+  if (typeof data === 'string') {
+    data = new TextEncoder().encode(data);
+  }sssssssss 
 
   if (!walletAddress || !privateKey || !data) {
     return res.status(400).json({ message: 'Wallet address, private key, and dataset are required.' });

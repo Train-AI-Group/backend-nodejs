@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node --inspect index.js",
+    "test": "node --inspect=127.0.0.1:9230 test-upload.js"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +15,6 @@
     "auth": "file:",
     "cors": "^2.8.5",
     "express": "^4.21.1",
-    "node-fetch": "^3.3.2"
-  },
-  "type": "module"
+    "node-fetch": "^2.7.0"
+  }
 }
