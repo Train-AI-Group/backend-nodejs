@@ -1,11 +1,11 @@
 import Arweave from 'arweave';
 const arweave = Arweave.init({
-  host: 'testnet.arweave.net',
+  host: 'arweave.net',
   port: 443,
   protocol: 'https',
 });
 
-const uploadDataset = async (req, res) => {
+const uploadTextDataset = async (req, res) => {
   let { walletAddress, privateKey, data } = req.body;
 
   if (typeof data === 'string') {
@@ -42,4 +42,4 @@ const uploadDataset = async (req, res) => {
   }
 };
 
-export { uploadDataset };
+export { uploadTextDataset };

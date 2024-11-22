@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 const walletAddress = 'na';
 const privateKey = {
@@ -7,7 +7,7 @@ const privateKey = {
 };
 var data = 'Sample dataset to upload to Arweave';
 
-const backendUrl = 'http://localhost:3000/auth/upload';
+const backendUrl = 'http://localhost:3000/auth/uploadText';
 
 async function testUpload() {
   try {

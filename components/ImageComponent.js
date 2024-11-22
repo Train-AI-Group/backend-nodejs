@@ -7,13 +7,13 @@ const arweave = Arweave.init({
     protocol: 'https',
 });
 
-const uploadDataset = async (req, res) => {
+const uploadImageDataset = async (req, res) => {
     try {
-        const { walletAddress, privateKey, data } = req.body;
+        const { walletAddress, privateKey, data, metadata } = req.body;
 
-        if (!walletAddress || !privateKey || !data) {
+        if (!walletAddress || !privateKey || !data || !metadata) {
             return res.status(400).send({
-                error: 'Missing walletAddress, privateKey, or data in request body',
+                error: 'Missing walletAddress, privateKey, metadata, or data in request body',
             });
         }
 
@@ -34,6 +34,12 @@ const uploadDataset = async (req, res) => {
 
         transaction.addTag('App-Name', 'YourAppName');
         transaction.addTag('Content-Type', response.headers.get('content-type') || 'application/octet-stream');
+        transaction.addTag('Dataset-Name', req.body.dataset_name);
+        transaction.addTag('Visibility', req.body.visibility);
+        transaction.addTag('Field-Of-Study', req.body.field_of_study);
+        transaction.addTag('Domain', req.body.domain);
+        transaction.addTag('Method', req.body.domain);
+        transaction.addTag('Clean-Dataset', req.body.clean_dataset);
 
         await arweave.transactions.sign(transaction, wallet);
         const arweaveResponse = await arweave.transactions.post(transaction);
@@ -52,4 +58,4 @@ const uploadDataset = async (req, res) => {
     }
 };
 
-export { uploadDataset };
+export { uploadImageDataset };
