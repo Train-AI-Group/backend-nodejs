@@ -34,12 +34,6 @@ const uploadImageDataset = async (req, res) => {
 
         transaction.addTag('App-Name', 'YourAppName');
         transaction.addTag('Content-Type', response.headers.get('content-type') || 'application/octet-stream');
-        transaction.addTag('Dataset-Name', req.body.dataset_name);
-        transaction.addTag('Visibility', req.body.visibility);
-        transaction.addTag('Field-Of-Study', req.body.field_of_study);
-        transaction.addTag('Domain', req.body.domain);
-        transaction.addTag('Method', req.body.domain);
-        transaction.addTag('Clean-Dataset', req.body.clean_dataset);
 
         await arweave.transactions.sign(transaction, wallet);
         const arweaveResponse = await arweave.transactions.post(transaction);
