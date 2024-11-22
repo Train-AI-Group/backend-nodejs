@@ -64,7 +64,7 @@ async function testWallet() {
 
     const data = 'Sample dataset to upload to Arweave';
 
-    const backendUrl = 'http://localhost:3000/auth/upload';
+    const backendUrl = 'http://localhost:3000/auth/uploadText';
 
     const response = await fetch(backendUrl, {
       method: 'POST',
