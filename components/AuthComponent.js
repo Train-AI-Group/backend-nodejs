@@ -9,7 +9,7 @@ const uploadDataset = async (req, res) => {
   var { walletAddress, privateKey, data } = req.body;
   if (typeof data === 'string') {
     data = new TextEncoder().encode(data);
-  }sssssssss 
+  }
 
   if (!walletAddress || !privateKey || !data) {
     return res.status(400).json({ message: 'Wallet address, private key, and dataset are required.' });

@@ -1,5 +1,7 @@
 const fetch = require('node-fetch');
 
+const backendUrl = 'http://localhost:3000/auth/uploadImage';
+
 const walletAddress = '4p6-PFZPeZy5izieR9z35aDvyTHBCXZbkLQjfFNoZDg';
 const privateKey = {
   "kty": "RSA",
@@ -12,12 +14,10 @@ const privateKey = {
   "dq": "fJTIqRZ7l7Ly_MIWuzlULofNOvxmHO_9gr5JU8DfY1CMfng9TNmh3Wnsv80B69kTz8_ri9QVPeCJxJx1doJr4wBqPMIX3VhWyXovbmbadjyaWXHqYvZrA4GNc49DckWiwOHbBMKaqg4hyJ_hl01HbIp64HcgBRbUgXLdc2bZgeKsb2N6SVSYoVS9CpKk3RCRMAC26fES2VH1Or9cYXPlCKtt7SeMs75ekFWPfFHZREpBnS5PoFsKHb6_XVDrcYM94Rbe_jyHxnKwjf_bi9-bR37a_0K8_mqHXiCaBRkAwjZydTUNYsp_rGqOGEqXchC9zN8VwsZwTDh3mInA2sPVAQ",
   "qi": "VthMHhoj8UMr7jz_QAZB57Hui2m6kJvDoAJaStd_9RMk5HCrgRa4BOdz9rEgy7uxTBfPDGZ8NLGtPyIKQLuXJ03y_WK7NN-B_bWTJ8KisRu8xGl1DPe3YpPDLPUlnRaQip-e-G0-CeFCJ9t-owvEccwNnX94d51EngZT2tUckJu0HzTBLEU3QrhhlwCKvKFr3AgbdKFmWmEfJBArSMIQY66Jd8ScmNKwMbRynf_tod6k5pJMGZGrTciuTkhiTnTg90rAatM92Jkl4ez_-5-chhhINwTNf0APJHtakEFHP8FN6cpvvjsUFqiS6DQTV-RMPodALnbsvRvi3ltXsizB9Q"
 };
-var data = 'Sample dataset to upload to Arweave';
 
-const backendUrl = 'http://localhost:3000/auth/upload';
-
-async function testUpload() {
+async function testImageUpload() {
   try {
+    const data = "https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png"; 
     const response = await fetch(backendUrl, {
       method: 'POST',
       headers: {
@@ -32,14 +32,15 @@ async function testUpload() {
     const result = JSON.parse(textResponse);
 
     if (response.ok) {
-      console.log('Success:', result.message);
+      console.log('✅ Success:', result);
       console.log('Transaction ID:', result.transactionId);
+      console.log('Arweave URL:', result.arweaveUrl);
     } else {
-      console.log('Error:', result.message);
+      console.log('❌ Error:', result.error);
     }
   } catch (error) {
-    console.error('Request failed', error);
+    console.error('❌ Request failed:', error.message);
   }
 }
 
-testUpload();
+testImageUpload();
