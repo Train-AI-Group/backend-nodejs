@@ -7,13 +7,13 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:3000/auth/upload",
+			"name": "Upload text",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"walletAddress\": \"vbBAwKg-VEn9Nvg3Ubm0nvqXe6zGrxfDDhvj0gUdIc8\",\n    \"privateKey\": {\n        \"d\": \"JrusUSze53dxm3d4yZEZZsJ8Z4uOrpOXIq2BQQkjMGVY94lQw8QdDNIMy6xWDupJyAqx9vyiBcqdBdnelL6_tkEIek5Qayo9ENvYgU7e2JuaVdzcpxJ4ofCVXRO_8R9A5NOeyxld81_BS6RHHGV-6jTTA8Cb8-C1ZWTQoWZGdGyeelJLLwccP93qcK9zbMnm6_XMIg81JTxejxFrgru3q3r5mpURZo8XJ1SplIEDXB0VR6b0bNy0-04PXWg7lnNnpoLHhMYM-EFMpCoPsPOkxiU5H9i7099WVFL8hWwmBkE2-zm9u15pny5WD5olJ7NfJavk5rEZhh1cIWKCzUGm1fxOOgHU1JZkfLByL-Ql0jfslcIjUeeplLLj2ViEkcFqHBAAFFW3DiQxF3JZpmyU6fMVQECcAonCPDb2D7KQEZSPWfYI18kbAbkEfBU5V4b4jgoXuK57Rermt94UginiU9q4h0u2cytrpU4k9CgSN_YyaoI9IEwr1KPksWBAhX5Td0t_J8-ZaZvexbjb0VDrOS2cdesSMmKAPFiycdD7qdpD-5PNlve8cnp6z5s3C4uDcerzgn40LRRP8VJhIrva3c2gqN0XMR-iN-LOWISfbHN4WBlMMUmuU0HkZsRewrkWpG7XhWjF1Ua-6nMGPs5tbTKjui3Ygizytm2DRUIn3UE\",\n        \"dp\": \"lQFQjA74_vX2Ddf0je51vB10oj70OpiAVVagWJF4-iq-pBTHVipkjQpx7NisYT8xsR_0iMTO6mhual0ZSmjz0XCrlyY27Ak7j58W01yebTcNNIEXUCBfxbbABXcZLkzeC4BUCOFnUwGL5UfVaCfBtzV61lcJIeLECWkjLHfxj-E6EFE6Js9mZbxdyT_xqmHiouasUlKVItDFb1IVqy5rjJS_L8dCyeD7HG-WWFpUbJDb2nn_EhT0T5MGBtfw_7BUM_325TKYAYiwL8MLVoFYwVDNOZkczHPexG44NxQ4o2qON6EnOa0rVOVOOpkCacqw1BsObuXKF780tqHheADVxQ\",\n        \"dq\": \"GmZ-Qw3_zi-u1aYP10QTknN98vDd_9QXI1ldbccq8SwNmAwFdkwt0ey-yU7vwiU1HLafkKdBDTeIT5QxjpYtXDVqfwTucHXiEXLeP7F6G-h1YjZw2rCGALaL4Z_tbaFr02O65yMML2JTN9mIXODP46gbqmaRHyo2CceSlzOwmbyWdwqapSelDXSmL7eqY51EgFKgI2h53aroQjwS2yjBvuWLFj4wRNjl4eUJgIoodDIVPHz8ty5sSjr8og4DYEdGPGoo5q4dD0DxKJV-d2XFu6r6KKf3qcdlPbGE01L4cuF9XXMSNoy4pZWd2GsHw_l4hVke1eLlkxiooF6nQHzDoQ\",\n        \"e\": \"AQAB\",\n        \"ext\": true,\n        \"kty\": \"RSA\",\n        \"n\": \"g8kSRbXyZSUKl12YMGb13u6UFQ0v5oM5ylCy0QKibeRtXYPfG3g8Z3DNz8wjIUHZmFdRcH9-vjiMWlwwJWPsZYx2fRLGlBcuelZMrKkpl5HjXYb7_ERcqo8MfQ0QkkpLK_HoOD9Gvc9QFHz3bGDMWXe1sAoz_6L76Gz0hRouIIXLFw5LPccbf2Cm6La31hK1hMfjnBm4PNZKvOIT4m6OFykU8JeQTWjv82XzGOM2DcZWjpUsM5T0-Be-3rBZuCpKnHyw6oRXsbkYINYvud701U-nLlrm8TyNxxTS82-oolh6OXo0bqGf56bCENrga3_4rXQqdRatIxkzrtt0LoXBiSxxdK2gEiKvcOPmsaxDCgF8CKZMV4DWSGZcGR7s91wrS0eEEEQlPqhenT3ZRlevHwedpNp0yPdMfcsMmckQ7Y8p6MgKe711P30i7F2DQMhbewLEiQv6uHIEkdJ1qPRyx5xQXJtehP1uWbtO8KXLv0hoKwBUoO01F7R0rU3GkcUZtedtML1FDibWPDg6BcFAHLt8i2bhggD8k9gxrVxPyDm815MEMffs7e3yzewMEvZRd7duAbvq0uKtMkW9-2Ff7KfltzwbvZ70Moh1WdabLw6bb6lReYu3qtPX1S3iqt9f44YAEj3l-SXo1TG8HOvfRayv81oc4Wf762zZYUpvPZs\",\n        \"p\": \"wOwm8xnZXtz07FD48G2VgJZvCm0sYdsitrtg3fjoN8XIQrH67-py17T7ahGWBmP4mPJiLf1OzUUj2fxGo_mjinyUz4ctS9ADM139muNK6SMzxr2YIBVIChEp7Xwx6hTB93mW_g4Z79c1-ks1VhMBYWnNi6q_j-fBBmih3jYlSG1fe6wZP0bsFt-zUP_XwQ_023YRdqc9ArCrY3-lWyBUx1j1xsL4FfLGTRwp_0FBcs0ndIYXjE4UWqB43PtWEQUl4dkcxdtEu1-Vy4UEfSAxNnTxJzpDqCo3Sj0jYO8d3iGHgE4pqvSLecw09id-diYGfNvU4S5H8gxC_Z2ppdjDSw\",\n        \"q\": \"rt-snxTtvNExqUrrLgCXRk1SmhOV1HtXfgVMaRChQdmSFrUorr7aBO5ExnLOTDLmvqJ_YtxjrguhlnIvyLnGnvCY4F3o2kid61Mm7e7DOzcKx_Oo4ny7XJejemFdwcS73j-bRJ4FwViBbXezKf-bGjyHO2nQOqpjJmMo5sEEVQB4kIJzL528Imex3oPOaAFzsvnAF2f-6sBY7vu7rA3J3LBpC0Muzra-MkWIz-q0j046pVekM9Rp_3a7xUg56gYRYSRpy7VfM3AmVVmn1_Pri3sNtDEQ3QueOTOokRj9GSXwIzNGKUSLx9wSXyLvXOus9vyJoBpgt8PcbHJAP9us8Q\",\n        \"qi\": \"WWNvHjO7bpYCF1Kt1NRi3fOz2JRsFSk8zClqe5RRHAwPlMtnZYGl5mO1Qh15wmxo9C68A1L-TCEq29jnizvAPzd_-bRPwp2PExv4L9fWVIp3DlAeMmmdNwlf9-WQr-E9F9NzLwcQUMK1zn4JKnOeEpi1DrGeWX-C_XW_51La5-dHv6ZuVz20FidZ7lChaJWx1YOH8SpRHYeaBVre0GWxyvKBdJbPGppZ7I6XQYNp1N609WT_pdgBoz-kIH9EoBVAq8_fF85elSPLSZo5VVn4hSDFFv1UmHPSsTAAtLRSS49QnrOiMpVfvu6Vf90C0eCJ0_cA-Zw5Jm2Oepz2VPqXww\"\n    },\n    \"data\": \"Hello world!\",\n    \"dataset-name\": \"THE DATA\"\n}",
+					"raw": "{\n    \"walletAddress\": \"vbBAwKg-VEn9Nvg3Ubm0nvqXe6zGrxfDDhvj0gUdIc8\",\n    \"privateKey\": {\n        \"d\": \"JrusUSze53dxm3d4yZEZZsJ8Z4uOrpOXIq2BQQkjMGVY94lQw8QdDNIMy6xWDupJyAqx9vyiBcqdBdnelL6_tkEIek5Qayo9ENvYgU7e2JuaVdzcpxJ4ofCVXRO_8R9A5NOeyxld81_BS6RHHGV-6jTTA8Cb8-C1ZWTQoWZGdGyeelJLLwccP93qcK9zbMnm6_XMIg81JTxejxFrgru3q3r5mpURZo8XJ1SplIEDXB0VR6b0bNy0-04PXWg7lnNnpoLHhMYM-EFMpCoPsPOkxiU5H9i7099WVFL8hWwmBkE2-zm9u15pny5WD5olJ7NfJavk5rEZhh1cIWKCzUGm1fxOOgHU1JZkfLByL-Ql0jfslcIjUeeplLLj2ViEkcFqHBAAFFW3DiQxF3JZpmyU6fMVQECcAonCPDb2D7KQEZSPWfYI18kbAbkEfBU5V4b4jgoXuK57Rermt94UginiU9q4h0u2cytrpU4k9CgSN_YyaoI9IEwr1KPksWBAhX5Td0t_J8-ZaZvexbjb0VDrOS2cdesSMmKAPFiycdD7qdpD-5PNlve8cnp6z5s3C4uDcerzgn40LRRP8VJhIrva3c2gqN0XMR-iN-LOWISfbHN4WBlMMUmuU0HkZsRewrkWpG7XhWjF1Ua-6nMGPs5tbTKjui3Ygizytm2DRUIn3UE\",\n        \"dp\": \"lQFQjA74_vX2Ddf0je51vB10oj70OpiAVVagWJF4-iq-pBTHVipkjQpx7NisYT8xsR_0iMTO6mhual0ZSmjz0XCrlyY27Ak7j58W01yebTcNNIEXUCBfxbbABXcZLkzeC4BUCOFnUwGL5UfVaCfBtzV61lcJIeLECWkjLHfxj-E6EFE6Js9mZbxdyT_xqmHiouasUlKVItDFb1IVqy5rjJS_L8dCyeD7HG-WWFpUbJDb2nn_EhT0T5MGBtfw_7BUM_325TKYAYiwL8MLVoFYwVDNOZkczHPexG44NxQ4o2qON6EnOa0rVOVOOpkCacqw1BsObuXKF780tqHheADVxQ\",\n        \"dq\": \"GmZ-Qw3_zi-u1aYP10QTknN98vDd_9QXI1ldbccq8SwNmAwFdkwt0ey-yU7vwiU1HLafkKdBDTeIT5QxjpYtXDVqfwTucHXiEXLeP7F6G-h1YjZw2rCGALaL4Z_tbaFr02O65yMML2JTN9mIXODP46gbqmaRHyo2CceSlzOwmbyWdwqapSelDXSmL7eqY51EgFKgI2h53aroQjwS2yjBvuWLFj4wRNjl4eUJgIoodDIVPHz8ty5sSjr8og4DYEdGPGoo5q4dD0DxKJV-d2XFu6r6KKf3qcdlPbGE01L4cuF9XXMSNoy4pZWd2GsHw_l4hVke1eLlkxiooF6nQHzDoQ\",\n        \"e\": \"AQAB\",\n        \"ext\": true,\n        \"kty\": \"RSA\",\n        \"n\": \"g8kSRbXyZSUKl12YMGb13u6UFQ0v5oM5ylCy0QKibeRtXYPfG3g8Z3DNz8wjIUHZmFdRcH9-vjiMWlwwJWPsZYx2fRLGlBcuelZMrKkpl5HjXYb7_ERcqo8MfQ0QkkpLK_HoOD9Gvc9QFHz3bGDMWXe1sAoz_6L76Gz0hRouIIXLFw5LPccbf2Cm6La31hK1hMfjnBm4PNZKvOIT4m6OFykU8JeQTWjv82XzGOM2DcZWjpUsM5T0-Be-3rBZuCpKnHyw6oRXsbkYINYvud701U-nLlrm8TyNxxTS82-oolh6OXo0bqGf56bCENrga3_4rXQqdRatIxkzrtt0LoXBiSxxdK2gEiKvcOPmsaxDCgF8CKZMV4DWSGZcGR7s91wrS0eEEEQlPqhenT3ZRlevHwedpNp0yPdMfcsMmckQ7Y8p6MgKe711P30i7F2DQMhbewLEiQv6uHIEkdJ1qPRyx5xQXJtehP1uWbtO8KXLv0hoKwBUoO01F7R0rU3GkcUZtedtML1FDibWPDg6BcFAHLt8i2bhggD8k9gxrVxPyDm815MEMffs7e3yzewMEvZRd7duAbvq0uKtMkW9-2Ff7KfltzwbvZ70Moh1WdabLw6bb6lReYu3qtPX1S3iqt9f44YAEj3l-SXo1TG8HOvfRayv81oc4Wf762zZYUpvPZs\",\n        \"p\": \"wOwm8xnZXtz07FD48G2VgJZvCm0sYdsitrtg3fjoN8XIQrH67-py17T7ahGWBmP4mPJiLf1OzUUj2fxGo_mjinyUz4ctS9ADM139muNK6SMzxr2YIBVIChEp7Xwx6hTB93mW_g4Z79c1-ks1VhMBYWnNi6q_j-fBBmih3jYlSG1fe6wZP0bsFt-zUP_XwQ_023YRdqc9ArCrY3-lWyBUx1j1xsL4FfLGTRwp_0FBcs0ndIYXjE4UWqB43PtWEQUl4dkcxdtEu1-Vy4UEfSAxNnTxJzpDqCo3Sj0jYO8d3iGHgE4pqvSLecw09id-diYGfNvU4S5H8gxC_Z2ppdjDSw\",\n        \"q\": \"rt-snxTtvNExqUrrLgCXRk1SmhOV1HtXfgVMaRChQdmSFrUorr7aBO5ExnLOTDLmvqJ_YtxjrguhlnIvyLnGnvCY4F3o2kid61Mm7e7DOzcKx_Oo4ny7XJejemFdwcS73j-bRJ4FwViBbXezKf-bGjyHO2nQOqpjJmMo5sEEVQB4kIJzL528Imex3oPOaAFzsvnAF2f-6sBY7vu7rA3J3LBpC0Muzra-MkWIz-q0j046pVekM9Rp_3a7xUg56gYRYSRpy7VfM3AmVVmn1_Pri3sNtDEQ3QueOTOokRj9GSXwIzNGKUSLx9wSXyLvXOus9vyJoBpgt8PcbHJAP9us8Q\",\n        \"qi\": \"WWNvHjO7bpYCF1Kt1NRi3fOz2JRsFSk8zClqe5RRHAwPlMtnZYGl5mO1Qh15wmxo9C68A1L-TCEq29jnizvAPzd_-bRPwp2PExv4L9fWVIp3DlAeMmmdNwlf9-WQr-E9F9NzLwcQUMK1zn4JKnOeEpi1DrGeWX-C_XW_51La5-dHv6ZuVz20FidZ7lChaJWx1YOH8SpRHYeaBVre0GWxyvKBdJbPGppZ7I6XQYNp1N609WT_pdgBoz-kIH9EoBVAq8_fF85elSPLSZo5VVn4hSDFFv1UmHPSsTAAtLRSS49QnrOiMpVfvu6Vf90C0eCJ0_cA-Zw5Jm2Oepz2VPqXww\"\n    },\n    \"data\": \"Hello world!\",\n    \"field_of_study\": \"Education\",\n    \"domain\": \"Computer Vision\",\n    \"method\": \"Classification\",\n    \"is_data_clean\": true,\n    \"dataset_name\": \"CV_dataset\",\n    \"image\": \"<image buffer>\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -30,6 +30,36 @@
 					"path": [
 						"auth",
 						"uploadText"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updated Metadata",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"transaction_id\": \"g915BFM4NMossEuYuxg5hZC_iP_Vw-dj2SIYzmTW8Ew\",\n    \"field_of_study\": \"Education\",\n    \"domain\": \"Computer Vision\",\n    \"method\": \"Classification\",\n    \"is_data_clean\": true,\n    \"dataset_name\": \"CV_dataset\",\n    \"image\": \"<image buffer>\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/update/metadata",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"update",
+						"metadata"
 					]
 				}
 			},
