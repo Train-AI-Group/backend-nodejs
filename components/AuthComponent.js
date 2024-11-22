@@ -1,12 +1,13 @@
-const Arweave = require('arweave');
+import Arweave from 'arweave';
 const arweave = Arweave.init({
-  host: 'arweave.net',
+  host: 'testnet.arweave.net',
   port: 443,
   protocol: 'https',
 });
 
 const uploadDataset = async (req, res) => {
-  var { walletAddress, privateKey, data } = req.body;
+  let { walletAddress, privateKey, data } = req.body;
+
   if (typeof data === 'string') {
     data = new TextEncoder().encode(data);
   }
@@ -16,13 +17,17 @@ const uploadDataset = async (req, res) => {
   }
 
   try {
-    const arweaveKey = await arweave.wallets.jwkToAddress(privateKey);
+    const walletBalance = await arweave.wallets.getBalance(walletAddress);
+    console.log(`Wallet balance: ${walletBalance}`);
+
+    const arweaveKey = privateKey;
     const transaction = await arweave.createTransaction({ data }, arweaveKey);
 
     transaction.addTag('Content-Type', 'text/plain');
     transaction.addTag('Wallet-Address', walletAddress);
 
     await arweave.transactions.sign(transaction, arweaveKey);
+
     const response = await arweave.transactions.post(transaction);
 
     console.log(`Transaction ID: ${transaction.id}`);
@@ -37,4 +42,4 @@ const uploadDataset = async (req, res) => {
   }
 };
 
-module.exports = { uploadDataset };
+export { uploadDataset };

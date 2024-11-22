@@ -1,5 +1,5 @@
-const fetch = require('node-fetch');
-const Arweave = require('arweave');
+import fetch from 'node-fetch';
+import Arweave from 'arweave';
 
 const arweave = Arweave.init({
     host: 'arweave.net',
@@ -52,4 +52,4 @@ const uploadDataset = async (req, res) => {
     }
 };
 
-module.exports = { uploadDataset };
+export { uploadDataset };

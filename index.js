@@ -1,8 +1,10 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const routes = require('./routes/routes');
-
+import express from 'express';
+import bodyParser from 'body-parser';
+import routes from './routes/routes.js';
 const app = express();
+
+app.use(bodyParser.json({ limit: '200mb' }));
+app.use(bodyParser.urlencoded({ limit: '200mb', extended: true }));
 
 app.use(bodyParser.json());
 
