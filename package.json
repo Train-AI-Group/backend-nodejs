@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node --inspect index.js",
-    "test": "node --inspect=127.0.0.1:9230 test-upload.js",
-    "testImage": "node --inspect=127.0.0.1:9231 test-image-upload.js",
-    "testWallet": "node --inspect=127.0.0.1:9232 createLocalWallet.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
