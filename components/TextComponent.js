@@ -33,7 +33,7 @@ const uploadTextDataset = async (req, res) => {
 
     await arweave.transactions.sign(transaction, arweaveKey);
     const arweaveResponse = await arweave.transactions.post(transaction);
-    arweave.api.get('mine')
+
     console.log(`Transaction ID: ${transaction.id}`);
 
     const dbConnection = getDatabaseConnection();
