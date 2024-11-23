@@ -1,10 +1,4 @@
-import Arweave from 'arweave';
-
-const arweave = Arweave.init({
-  host: 'localhost',
-  port: 1984,
-  protocol: 'http'
-});
+import arweave from '../arweave';
 
 export async function getTransaction(transactionId) {
   try {
@@ -12,9 +6,9 @@ export async function getTransaction(transactionId) {
 
     console.log('Transaction ID:', transaction.id);
     console.log('Transaction Owner:', transaction.owner);
-    console.log('Transaction Data:', transaction.get('data', { decode: true, string: true }));
+    console.log('Transaction Data:', transaction.get('data', { decode: true, string: false }));
   } catch (error) {
-    console.error('Error retrieving transaction:', error.message);
+    console.error('Error retrieving transaction:', error);
   }
 }
 

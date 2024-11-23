@@ -1,11 +1,6 @@
-import Arweave from 'arweave';
+import arweave from '../arweave';
 import fs from 'fs';
 
-const arweave = Arweave.init({
-    host: 'localhost',  // Use 'arweave.net' for mainnet
-    port: 1984,         // Use 443 for mainnet
-    protocol: 'http',   // Use 'https' for mainnet
-});
 
 export async function createWallet() {
     // Generate a new wallet
