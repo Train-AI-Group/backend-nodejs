@@ -18,12 +18,11 @@ const uploadXlsxAndJSonDataset = async (req, res) => {
     const fileBuffer = Buffer.from(file, 'base64');
     let data;
 
-    // If the file is JSON, parse it
     if (dataType === 'json') {
       data = JSON.parse(fileBuffer.toString('utf8'));
       data = JSON.stringify(data);
     } 
-    // If the file is Excel, process it
+
     else if (dataType === 'excel') {
       const workbook = XLSX.read(fileBuffer, { type: 'buffer' });
       const sheetNames = workbook.SheetNames;
@@ -35,15 +34,12 @@ const uploadXlsxAndJSonDataset = async (req, res) => {
       return res.status(400).json({ message: 'Unsupported data type. Please specify either "json" or "excel".' });
     }
 
-    // Get wallet balance (optional)
     const walletBalance = await arweave.wallets.getBalance(walletAddress);
     console.log(`Wallet balance: ${walletBalance}`);
 
-    // Upload the data to Arweave
     const arweaveKey = privateKey;
     const transaction = await arweave.createTransaction({ data: new TextEncoder().encode(data) }, arweaveKey);
-    
-    // Add tags for metadata
+
     transaction.addTag('Content-Type', dataType === 'json' ? 'application/json' : 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
     transaction.addTag('Wallet-Address', walletAddress);
 
@@ -52,7 +48,6 @@ const uploadXlsxAndJSonDataset = async (req, res) => {
 
     console.log(`Transaction ID: ${transaction.id}`);
 
-    // Return the response to the client
     res.json({
       message: 'Dataset successfully uploaded to Arweave.',
       transactionId: transaction.id,
