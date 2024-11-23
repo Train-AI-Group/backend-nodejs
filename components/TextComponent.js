@@ -2,17 +2,17 @@ import Arweave from 'arweave';
 import { getDatabaseConnection } from "../database/connect.js"
 
 const arweave = Arweave.init({
-  host: 'arweave.net',
-  port: 443,
-  protocol: 'https',
+  host: 'localhost',
+  port: 1984,
+  protocol: 'http'
 });
 
 const uploadTextDataset = async (req, res) => {
   let { walletAddress, privateKey, data, field_of_study, domain, method, is_data_clean, dataset_name, image } = req.body;
 
-  if (typeof data === 'string') {
-    data = new TextEncoder().encode(data);
-  }
+  // if (typeof data === 'string') {
+  //   const dataBuffer = Buffer.from(data, 'utf-8');
+  // }
 
   if (!walletAddress || !privateKey || !data) {
     return res.status(400).json({ message: 'Wallet address, private key, and field_of_study, domain, method, is_data_clean, dataset_name, image and data are required.' });
@@ -23,15 +23,17 @@ const uploadTextDataset = async (req, res) => {
     console.log(`Wallet balance: ${walletBalance}`);
 
     const arweaveKey = privateKey;
+    console.log(typeof data)
     const transaction = await arweave.createTransaction({ data }, arweaveKey);
+
+    console.log("created tx")
 
     transaction.addTag('Content-Type', 'text/plain');
     transaction.addTag('Wallet-Address', walletAddress);
 
     await arweave.transactions.sign(transaction, arweaveKey);
-
     const arweaveResponse = await arweave.transactions.post(transaction);
-
+    arweave.api.get('mine')
     console.log(`Transaction ID: ${transaction.id}`);
 
     const dbConnection = getDatabaseConnection();
@@ -45,7 +47,7 @@ const uploadTextDataset = async (req, res) => {
 
     res.status(200).json({
       message: 'Dataset successfully uploaded to Arweave.',
-      arweaveUrl: `https://arweave.net/${transaction.id}`,
+      arweaveUrl: `https://localhost:1984/${transaction.id}`,
       status: arweaveResponse.status,
     });
   } catch (error) {

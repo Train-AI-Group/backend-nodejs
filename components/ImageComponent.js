@@ -2,9 +2,9 @@ import fetch from 'node-fetch';
 import Arweave from 'arweave';
 
 const arweave = Arweave.init({
-    host: 'arweave.net',
-    port: 443,
-    protocol: 'https',
+    host: 'localhost',
+    port: 1984,
+    protocol: 'http'
 });
 
 const uploadImageDataset = async (req, res) => {
