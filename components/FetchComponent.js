@@ -1,14 +1,5 @@
-import Arweave from 'arweave';
-// const arweave = Arweave.init({
-//    host: 'localhost',
-//    port: 1984,
-//    protocol: 'http',
-// });
-const arweave = Arweave.init({
-   host: 'testnet.arweave.net',
-   port: 443,
-   protocol: 'https',
- });
+import arweave from '../arweave.js';
+
 const fetchDataset = async (req, res) => {
    let { transactionId } = req.body;
 
