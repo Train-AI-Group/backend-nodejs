@@ -36,7 +36,7 @@ end
 Handlers.add("calReward", Handlers.utils.hasMatchingTag('Action', 'calReward'), function(msg)
   local tags = msg.Tags
   local result = CalReward(tags)
-  -- print(result)
+  print(result)
 
   return result
 end)
