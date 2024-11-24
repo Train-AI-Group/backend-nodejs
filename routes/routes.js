@@ -1,6 +1,6 @@
 import express from 'express';
 import { fetchDataset } from '../controllers/FetchComponent.js';
-import { calReward } from '../controllers/calReward.js';
+import { calReward } from '../controllers/CalReward.js';
 import uploadZip from '../controllers/uploadZip.js';
 import upload from '../middleware/multer.js';
 // import { updateMetadata } from '../controllers/metadataComponent.js';
