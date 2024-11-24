@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import routes from './routes/routes.js';
+import { getDatabaseConnection } from "./database/connect.js"
 const app = express();
 
 app.use(bodyParser.json({ limit: '200mb' }));
