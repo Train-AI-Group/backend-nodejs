@@ -7,12 +7,8 @@ To successfully run this backend You should have node.js and npx
 
 ## Steps to run
 
-Install arlocal
-        
-    npx install arlocal
-    
-Run arlocal
-    
+Install and run arlocal
+
     npx arlocal --verbose
 
 Keep this arlocal instance alive in a seperate terminal
