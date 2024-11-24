@@ -1,17 +1,10 @@
-import {
-   connect,
-   createDataItemSigner,
-   message,dryrun, result, spawn
-} from "@permaweb/aoconnect";
-
-// Function to send a message to the "calReward" process
-const privateKey = "";
+import {createDataItemSigner,message, result} from "@permaweb/aoconnect";
 
 const calReward = async (req, res) => {
-   const { fieldsOfStudy, domains, tasksOrMethods, cleanOrUnclean } = req.body;
+   const { fieldsOfStudy, domains, tasksOrMethods, cleanOrUnclean,privateKey } = req.body;
    // console.log("req.body : ",req.body);
    
-   if (!fieldsOfStudy || !domains || !tasksOrMethods || !cleanOrUnclean) {
+   if (!fieldsOfStudy || !domains || !tasksOrMethods || !cleanOrUnclean || !privateKey) {
       return res.status(400).json({ error: 'Missing required parameters.' });
    }
 
