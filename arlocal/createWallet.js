@@ -1,4 +1,4 @@
-import arweave from '../arweave';
+import arweave from '../arweave.js';
 import fs from 'fs';
 
 
@@ -11,7 +11,7 @@ export async function createWallet() {
 
     // Log the wallet information
     console.log('Wallet Address:', address);
-    console.log('Wallet Key:', JSON.stringify(wallet, null, 2));
+    console.log('Private Key:', JSON.stringify(wallet));
 
     // Save the wallet JSON to a file
     const walletFilePath = './testWallet.json'; // You can specify a custom path

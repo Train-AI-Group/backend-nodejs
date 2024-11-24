@@ -1,4 +1,4 @@
-import arweave from '../arweave';
+import arweave from '../arweave.js';
 import fs from 'fs';
 
 export async function createAndPostTransaction(wallet, data) {

@@ -1,4 +1,4 @@
-import arweave from '../arweave';
+import arweave from '../arweave.js';
 
 export async function getTransaction(transactionId) {
   try {
