@@ -5,8 +5,6 @@ import upload from '../middleware/multer.js';
 
 const router = express.Router();
 
-// router.post('/uploadText', uploadTextDataset);
-// router.post('/uploadImage', uploadImageDataset);
 router.post('/upload/zip', upload.single('zipfile'), uploadZip);
 // router.post('/update/metadata', updateMetadata);
 
