@@ -1,12 +1,11 @@
 import express from 'express';
-import { uploadDataset as textData } from '../components/AuthComponent.js';
-import { uploadDataset as ImageData } from '../components/ImageComponent.js';
-import { uploadXlsxAndJSonDataset } from '../components/JsonAndXlsxComponent.js';
+// import { updateMetadata } from '../controllers/metadataComponent.js';
+import uploadZip from '../controllers/uploadZip.js';
+import upload from '../middleware/multer.js';
 
 const router = express.Router();
 
-router.post('/upload', textData);
-router.post('/uploadImage', ImageData);
-router.post('/uploadDataSet', uploadXlsxAndJSonDataset);
+router.post('/upload/zip', upload.single('zipfile'), uploadZip);
+// router.post('/update/metadata', updateMetadata);
 
 export default router;
