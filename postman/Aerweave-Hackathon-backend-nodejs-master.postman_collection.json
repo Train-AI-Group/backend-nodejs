@@ -76,47 +76,55 @@
 						{
 							"key": "field_of_study",
 							"value": "Education",
+							"description": "metada",
 							"type": "text"
 						},
 						{
 							"key": "domain",
 							"value": "Computer Vision",
+							"description": "metada",
 							"type": "text"
 						},
 						{
 							"key": "method",
 							"value": "Classification",
+							"description": "metada",
 							"type": "text"
 						},
 						{
 							"key": "is_data_clean",
 							"value": "true",
+							"description": "metada",
 							"type": "text"
 						},
 						{
 							"key": "dataset_name",
 							"value": "CV_dataset",
+							"description": "metada",
 							"type": "text"
 						},
 						{
 							"key": "zipfile",
+							"description": "create your own, could be a ouple of images or csv or anything zipped",
 							"type": "file",
 							"src": "/home/atiq-shaikh/Pictures/Screenshots/test.zip"
 						},
 						{
 							"key": "walletAddress",
-							"value": "F0HmS1T3cMpGplyaAzZxsFN2VOvK--SwT6OSxYeINVU",
+							"value": "CfjUWWUoWrUURF2dFizRcTgGo1Jny8P20CmmFa75koc",
+							"description": "Get from testWallet.json",
 							"type": "text"
 						},
 						{
 							"key": "privateKey",
-							"value": "{\"kty\":\"RSA\",\"n\":\"tCaPR9HYGcL7qBrNULxgV1JEqyo9KHe6w0DKE8m5N4dezkV9rWOY_VFS5vqk0X1AJQ0k1NjLrIXVp99LhKXttRwoxqtBZ0zT7NcLg_bz9inZPRiqucQXSff8cDJpqTDGwg0XkdQvgt_GQtTByeNqJwblP0L-iEsKHaAgIXgkH8Z7hQ-EdYp4y9P5n9q2_EMR0BvnDqIhZJ3bCS2VOd6MLPjOfHyGLfutHiAl8AYNnVodUswl9_HUBm43L7RKWgrRd2oneLRVDm8DNM-ry4bXwpuneRAg2nGfwJpeenn_6BETkh6bBsc89itHVsxYm1b1OnfpaDTOnebA3yWUnjYADv7t78RcSO2FYJmuXG_GvKBV07lxsLeHjDiNEc9NzpEd4dwXTgzifXodHGs7gEgwaZJpTGlQp2LwhR6fzGsbPTTSIV4Xi-KsqAIXxao2QwUK8Fd58hJo0f3Dcy9h-HpE57NXiTrerp5R2cupc5oQWVUpKTtNh_A3bmjsjwMoGs-9i5KXzFbABEVvGvf-4igA2vKzPzXFk9pb0QB4_bddsBg3o85iOIZFQfoPgCdREbSO_f0DvNJz_dq3cu0DAxMvnM_QZQuJJXedEg1Wmf5XyiB8IX33jlmOVk1SvXqG3JYWL_Db4XB_0YkSuy0XfpZQPpPhbQCaKkRq0M6beOhQutE\",\"e\":\"AQAB\",\"d\":\"CoOeXMjFF_ZQv5o-Wcgfx5LnK_X7cypfO6RzMtHU-fYgMPHedJVdtUmm-PD_l_QrX2o3qEZFp1pZippaPwn74FROFy_BMcMqsn3Hx9Y8vXUKbzHai3xjx1L2UFJJ50hv7j0LP00q73SJ3sZJ7-NyY2gYLr-1SS03gDyDaY6obZQVCxJZds57z7odvWAbikgsEMlDHFAXOrcJlMzcsu-fnuOP0hVGs8X2v-2Mh0hkKKcM83NTozehijVKKmInbX9Ig8Od3YIpXW36Wf2Fm1uhqbOR0_uObk9fvXMJAPUQO-osuixH_B6aWsvydkD3iivqZLThSg4ccbvpLXDlHlF8oepCcWGbn2yt34W2cZ8eFhhFZRDA73fa87mhRkn4VRWzknda0iy0aWF1Y_npchzrGmU3b7gChml2geZpYyroGxbzK0928Rl47-B2XEDComlyQ8yMZzbFKMZbsaMbHoTQCjBDHjgridszkpbvZD0QYl92DAUOJukCwTmtz2uZrqTDkOsxT65_Eu4zCgr2EGwgtR3-UZk4kwaU0fKxXmFM0aqq_tvaBN8Z7OdOj0MnLVqbRCPZ54oYsFl2S0lHEi7hXeXFtAGXK9WwBSgzkl8SeoJfinQDw1Wu28U5XDoYtLIN_ArUvcgNXxNCExj5cQbe0UVIRa_Horw8irjO0vRbSoE\",\"p\":\"6lF3_UhEB3Ow-FZN_6mF6DH4R9uchxz_BwbOzeAmPKGg5GcX5JiMSsox8gzHv1Kv2-71eMOfbok8ns_1p6pxJyHXZM6bpgUwKbTa4bqVAjVOwqEjTEb220JNAAJZn-hMzvT7bvLOs4MOrh_E4Qr4kjP3KDtTxTZ877C3dkKE6jq3lk85dZjbhTXkymo3bMm2Xt1oJHQpx__N2IHFmgaYHkLi87jJ1StqJCFrK0S2IFcYvUxU3EmRGLz4lNB8Yg1KxXeHT-OMdzGhP01DIxi8rr72QpgpZ-lUG_aRL1fg8PL0jNizHMEe_fEYfMEgaif79LkAba43HajPGh-vDBqbUQ\",\"q\":\"xNH35cxmBrb82ScTSDKmfPEfjh1gzKaqUaNQfxE3XjV5KeZDZjanBgCGuGK4Dvk8yOhAAvpOfIBByFCJ2KbDX8F7D8Krg8bMAuMlvVwIF6VhNUIrkFm_SoN1YlGaYbOCIyxfK2H_ryUprW2xyahBIH8orCbboXQA_BLjIYTPfQ_3IH1FrU_OjLcSkDXhzi1M6fo8LaNvsRRs50QLe4JBwO4N8AIE6AWGjSSNs8XhfU_pKAmJGY9nWOcMMfcaoB0td4Oz_ttkkE5nXZNwSctJ8QSoHSkZhtVjkbvI342mymrtdsaDwVGWAIcY50Z3yRZeP5jM4az_aYSUu8E9QUVHgQ\",\"dp\":\"c0mURO1qc1QrzXQBOno5JU54vzpBYIUWwWlLFSZlCc3ocJh8u_-Gf0HOoy5AlVTkq8x9wGZXqjYhum3NiyokNEHFTZcOI_hHgy21x_xaVlTOJJrN2DjOOoD7i7acTD4qlGUa1LLompAwB-Ifpy4TsTOaNpRCGjU98Vy8V5ZQ-UHclDr0pXSJBZjHsgPis0bn0PMUy2LQL9QffpgTFj6KV9FHAu13eMe8mHxM02QiS_Uueez1j9Eub8KCeA3ANSofENtHmzn1Iawsjw2_q6P_KedRGODu9m5p8Lw3INkXFtYjFq2EKvCmBAG8r50CCtkTcYwYtt5RxekJxOuz37uzkQ\",\"dq\":\"o_fgtBsyrElqIGbDU5SOyuv-Q-EJsbTvk4-hEhr_q4aU6GkioVbKkt-BXL8xY5gUIbQLD_ADzwjyxLUEAe_8OBvyL9EYHnJRp94gpL61Jy3p6_qyXFHIYYVfF4ewO9DWjAL9TiEYZ4toS0llogCAMVh-Q90jgEAqSdZaTqRcT24rjW-PyrD__I7P8kBRW_i1aP_Ffqf39uhzSb-QaVa8_MPV7Kth9wITdCaNvsUN893M-kPnadnkWVYy_LVGAzoLlNOt8pZIE0ieKIEaPQAVG6ureo-w6nl_t_tff45884ldR2Reg4E6nDnwb0xvoqD157mehiwfpIKFfl2gcG4NAQ\",\"qi\":\"I0eJEzDeh2US2a8ydLQQyQHo0_BAj4uHIKNvALzTx2XWNQUOToyMmvfKvrMX6nAvKgBbq2sxuAuT4gx1v2C0DOyQW202JDByIpy57Jhg_9GPCeCWGVy8FDI2bxF6hpjraRh_tQtaHlD8PqlUUPesTxAgnvu9E02HvysFsrGjmGeV_oNvRE9GJ7a803mGJ7LOAHohHrLsYSLss5Hm7V1U7lyqsSQ-cAzqsYO7QETFYcKiZfwNLDAyOH8EvP-ECYwHi6f4hH9vNCUokpMzd2mbnovQUjj9oJsOHkpOkgQ9O7aYC-UKrWPYUz44Cd3onP3EpplTu4DZd7-BPexlJV3-7w\"}",
+							"value": "{\"kty\":\"RSA\",\"n\":\"slmeRL8MezUps1txAfJ5YneWvYCNHSiW4AcPDek9JYiqtADUzplhTZ9GE-F6TnWQIVVCs08uU-DgMAYAT1CbCrnQKrZE_agB5AOF8c9FerG9icI2WT6i9QHkKi41XCw618r655ZSbd118ijau2L8gdFjjppEVTHfS8o5w3cEWpa3bS71cVz7wEYrEcVy6lr0S73jeio38mIc7LzqLXSGYmyx8HK_GyyL91s--Gnt4gZRZXVI0HjMtA4Qxg3F7HdGvI2AR-HhR63kA4dbYse_fzsZQ_SAeOgLGrd9bNGmoXVPzUKYu4_BM6BoUQAJqXU-EhX9DowED6GcSLcGtQjc1XghxhxREILUQbX4OEo-Vc7qcW_S1JmX2899LtFYs9Mk34P7zIwezMZeEtKD94EpGTClxO0yn5jKTqclQ2BWW3odVOd7HH3jS0_3VzEeZ5TWcdQaIFDjKPEr-Yr6kYruAiElmwNZnlhrl2V9DHjRxlDtZF3LXpO-chIJsmRkWtKH1meaY6ae9BUAMGQrRkHI4P8qMIQyL6FPXFMAIgAtGp59ag06SclJiYlutTKqe4Z6mMcs4Z2IOrRtPCBsq1Zey8FjBvdWN5cCEfgEaEf2uZGLW4EL1qcGEEafUJac3AzuAaG0uuST0-UykxeIKPXyS5JP6bD9B2tBI0VGVivIJ_k\",\"e\":\"AQAB\",\"d\":\"DuXqkR6Oadpahed9DKcXGbEYr_LFlup1k_gy-zwBBhog_FFXdXydgrDr1yxOHbC3XflzzWuvWIVf5NMTgoyeruovp-m64J-ArO3Yagcg7CtdxFyrUpAnZ6UFTLq4bV8qeS01AVRuxUurFxPvlZiitCtsEBT14VH9r6SQZ7IQ9IpDf0Tdbt9QDlMuNNlUDJyVbKBLmMBfFQm6FdKAE1T5Bs7CnG3RZfE2Le761yBuJSPW980wzG1S2DWWlBzBbEvYZlbBoP-O5IBznBHaAeniprumlCUf-DmV9-DdAtKOg0074c8O2BgdkPT00dNZe0TWbwdUMLtkeXPMDMzxK_02CSE-be1XyqKfswx9Dr9tjQ1gephqEdZd_s0yeSseA2kLosSnOynXyA_HQWlBXg73KL3tpnvMW8EmqMXfjcdBG9PZ7y5Ayyw0Y_w0U_3Z2yjLFM4KvXWa8mZaLG6K3QimGmKww0a8ZaZLS9KAB8D0H0dLr_CAIOifEu6p0y2MGUMoZoPkBkOOLyAEVp5cqD5NT2vNZfvK59IB76ZzXoYV4jdca8lbXZyzlfWN8omG2OHQW9udGQkS-W9yuAHcU4I3YiBcJT57J8b7TaSdjy7EfCme298-8od9SGHJMC4bHPHBCWIaQmTJ_T-GSQmX8tTOYtRG1K9Sk9pdB3NMAg7WtPs\",\"p\":\"2073GgvqrNjiIsJg9tCHREmTvYGYbUiVt6lMRBoEZBunDtBpzs6p9j26DnFTwTOB5YCmXXs4IfYV3keABnBCayYQF8O5t7XflPl0_1ToIierw68zXBIh3ubU5qYgUrbrW-tfneXYl9Xdbc5sbxlnGhCzEc7SgBrydX4Jba7C3buM9TFcrWfP_3hK2sep4qxbIbP-n74ql5koL3BD1_Uz15zB-Igac6XucVDpnlqw3A054wjc1AAIfZ17AnD2VVg8hht-J6iasbr7kQceo0CQgx9lchQ_bd44Bv6EF09dx9c6ImtUTSkMellBon3mgakGOTip0k7W8dIcBjwyAoVgSw\",\"q\":\"0DBlMk7gGAqWHUtXOKq9LDbDg8H9j7XutXNNxft8k7gGzlhbLxaTe96LGt-5aJjmA4Kf6ICAtyGR9XBVEkOqU8mmlR_bL-FsW3cVCkG5H0taP3tWz1dIJoPElQZYgVJTjDGnFwAcgr6LYOF3nN0Ly1V37yMJaUjY6pRpd27T6raOyB-mZ9t6fcn9Hm5QgG1RUooaLMyy82riuyoRSzNr68Q92O0_QQH27cEPtpII4BlarxFOi_IWvrIJ_g1ppQajEh2tZZRNaq_ISiyk1oFqcsvBBnEE-iz4oNH4jpSL0FMSoz1_-yqekeTRnWWFCCNpFxQSSvg0r4sMMBPf5TuWSw\",\"dp\":\"taz10PL8RpIoy2jBUNWwqOZW6I96SVXvCUXLc0MmThQGUaRfcr4LWH0MK7jADHXx7sCjkR9pgeDNfuU2bp8CtqbCgB1ZNZIKFOyOepLI9rpsdWAnKOewfWo2BpiqgDseQHh9Ll3hDu9RTwzJEUQ3AAXDgkYWZZ9tKd3uS5mRvoQHInvw7YnpahYp1JHA75GesQ3eKlEsEYgEHUBgQ3_SoZQvsAZ3-0QDgoXn8pHon3KpeKW34jvgzMbvxzbzKgI9qU8PNCVdeUyP6DXAsLbkwGr67AVQAmErgsfHf1P1OX7XnvnQzVbrClP0pnqrwM_X4wFI1XsQXyWSp6uoNiRtfw\",\"dq\":\"gHesqpujixJVSaRpIS2y6GquwUpe5mR09gE919L1L85aXNCHDAqZXdGY8y9lIRdgsH_Vn0pUoy0S_WqhBFE-9M81fUYYInavP82-7QJbcuUzvoKksfOBMUsUboVo7fxYU-V73ySRc1iTd2gKQIDiu0l1Zdqv_wkV2cNVRX7dRDP87Z8iN2pnLuIK0NFv2aAbk5xmxIhYUP7_BFHUNBx6FxWUuJzF8J5-un3s7VM2KNtcazV5y7_Kq0gABIZQT6ZF0HMBwfH-x7vLE4JzAW8Aue_jn870LFC957dJ8unVUOtCT_suU1YcXZjehIrVyYzYV4ZqN1rsX_qkvbI18iWP-w\",\"qi\":\"uHSnLjbMaW6B-wKhQymJ2niK1XNFV8UIum1zaaVbhPsVXyfa6or1I6SzdRr5pHNPoE69h-yX5r-VaUsDdAxdZSLBzpF37zJOmXX9AvGbMecIiIPeTLLQZO-AuPB3ShHx_AOfbUYHLBlVaHll4SAHFIHFHxmmwxKdjHSptrLKuK9Foxllol3SnNSbFhF-jNNbPIvIb2oIs5YWwyFHWXjmEyTcUybK-dWVP-thzxqPjOroY9r3TstIQ3Wikjxbr0UJ78ok-v8yutVXfyVu3tfEgXpZGycyxkp-_slfynDF5T-8L11OUaeGnwbAhdVFfqKCc7RdscTQppcb9nMbPsYBAg\"}",
+							"description": "Get from testWallet.json, stringify the object, all fields are required",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/auth/upload",
+					"raw": "http://localhost:3000/auth/upload/zip",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -124,7 +132,8 @@
 					"port": "3000",
 					"path": [
 						"auth",
-						"upload"
+						"upload",
+						"zip"
 					]
 				}
 			},
@@ -136,14 +145,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:1984/GynrqT02clZrG-sGeBwsMKr3KJvrJDhW0FpNJ2YV2vI",
+					"raw": "http://localhost:1984/-k6cD1_E551rznZozeHRqsEw26jrq6nBKRqD5Gmo1MQ",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "1984",
 					"path": [
-						"GynrqT02clZrG-sGeBwsMKr3KJvrJDhW0FpNJ2YV2vI"
+						"-k6cD1_E551rznZozeHRqsEw26jrq6nBKRqD5Gmo1MQ"
 					]
 				}
 			},
