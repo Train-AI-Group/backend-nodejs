@@ -4,3 +4,4 @@ logs
 .idea
 ts-logs
 coverage
+config.bat

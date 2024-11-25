@@ -6,15 +6,16 @@ import {
   Router
 } from 'express';
 import { ILogger } from '@utils/log';
-import { ICalRewardService } from '@services/cal-reward/cal-reward.service';
+import { IUploadService } from '@services/upload/upload.service';
 import { middleware } from '@middlewares/middleware';
 import { CalRewardPayload } from '@models/cal-reward.model';
+import { UploadPayload } from '@models/upload.model';
 
-export class CalRewardHandler {
+export class UploadHandler {
   constructor(
     private readonly router: Router,
     private readonly logger: ILogger,
-    private readonly service: ICalRewardService
+    private readonly service: IUploadService
   ) {
     this.register();
   }
@@ -22,21 +23,20 @@ export class CalRewardHandler {
   private readonly register = () => {
     this.router.get(
       '/cal-reward',
-      middleware.requestBody(this.logger, CalRewardPayload),
-      this.calReward
+      middleware.uploadFile(this.logger).single('zipfile'),
+      middleware.requestBody(this.logger, UploadPayload),
+      this.upload
     );
   };
 
-  private readonly calReward: RequestHandler = async (
+  private readonly upload: RequestHandler = async (
     req: Request,
     res: Response,
     next: NextFunction
   ): Promise<void> => {
     try {
-      const obj = await this.service.processReward(
-        req.body as CalRewardPayload
-      );
-      res.setHeader('Content-Type', 'application/json').status(200).send(obj);
+      const payload = await this.service.upload(req.body as UploadPayload);
+      res.status(201).send(payload);
     } catch (e) {
       this.logger.error(`exception retrieving dataset ${e}`);
       next(e);
