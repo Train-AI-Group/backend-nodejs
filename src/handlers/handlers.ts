@@ -3,10 +3,12 @@ import { ILogger } from '@utils/log';
 import { ServicesRegistry } from '@services/services';
 import { DatasetHandler } from '@handlers/dataset/dataset.handler';
 import { CalRewardHandler } from '@handlers/cal-reward/cal-reward.handler';
+import { UploadHandler } from '@handlers/upload/upload.handler';
 
 interface IHandlers {
   datasetHandler: DatasetHandler;
   rewardHandler: CalRewardHandler;
+  uploadHandler: UploadHandler;
 }
 
 export const initializeHandlers = (
@@ -17,7 +19,8 @@ export const initializeHandlers = (
   router.get('/', welcome);
   const handlers: IHandlers = {
     datasetHandler: new DatasetHandler(router, logger, services.datasetService),
-    rewardHandler: new CalRewardHandler(router, logger, services.rewardService)
+    rewardHandler: new CalRewardHandler(router, logger, services.rewardService),
+    uploadHandler: new UploadHandler(router, logger, services.uploadService)
   };
   return handlers;
 };
