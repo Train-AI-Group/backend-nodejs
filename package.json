@@ -11,6 +11,7 @@
   "description": "",
   "dependencies": {
     "@permaweb/aoconnect": "^0.0.62",
+    "ar-gql": "^2.0.2",
     "arweave-wallet-kit": "^1.0.8",
     "arweavekit": "^1.5.1",
     "auth": "file:",
