@@ -1,5 +1,6 @@
 import mine from '../arlocal/mine.js';
 import arweave from '../arweave.js';
+import testWallet from '../arlocal/testWallet.json' with { type: "json" };
 // import { getDatabaseConnection } from "../database/connect.js"
 
 const uploadZip = async (req, res) => {
@@ -8,9 +9,9 @@ const uploadZip = async (req, res) => {
     return res.status(400).send('No file uploaded.');
   }
 
-  let { walletAddress, privateKey, field_of_study, domain, method, is_data_clean, dataset_name } = req.body;
+  let { walletAddress, field_of_study, domain, method, is_data_clean, dataset_name } = req.body;
 
-  if (!walletAddress || !privateKey) {
+  if (!walletAddress) {
     return res.status(400).json({ message: 'Wallet address, private key, and field_of_study, domain, method, is_data_clean, dataset_name are required.' });
   }
 
@@ -18,7 +19,7 @@ const uploadZip = async (req, res) => {
     const walletBalance = await arweave.wallets.getBalance(walletAddress);
     console.log(`Wallet balance: ${walletBalance}`);
 
-    const arweaveKey = JSON.parse(privateKey);
+    const arweaveKey = testWallet.privateKey;
 
     const transaction = await arweave.createTransaction({ data: req.file.buffer }, arweaveKey);
     await mine();
