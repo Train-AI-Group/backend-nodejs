@@ -1,3 +1,3 @@
 import arweave from '../arweave.js';
 
-export default () => arweave.api.get('mine')
+export default () => arweave.api.get('mine');

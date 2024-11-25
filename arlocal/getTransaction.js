@@ -6,7 +6,10 @@ export async function getTransaction(transactionId) {
 
     console.log('Transaction ID:', transaction.id);
     console.log('Transaction Owner:', transaction.owner);
-    console.log('Transaction Data:', transaction.get('data', { decode: true, string: false }));
+    console.log(
+      'Transaction Data:',
+      transaction.get('data', { decode: true, string: false })
+    );
   } catch (error) {
     console.error('Error retrieving transaction:', error);
   }

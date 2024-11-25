@@ -10,21 +10,21 @@ const dbName = 'arweave-hackathon-db';
 let db = null;
 
 async function main() {
-    try {
-        // Use connect method to connect to the server
-        await client.connect();
-        console.log('Connected successfully to DB Server');
-        db = client.db(dbName);
-    } catch (e) {
-        console.log(e);
-        console.log("Error while connecting to MongoDB.")
-    }
+  try {
+    // Use connect method to connect to the server
+    await client.connect();
+    console.log('Connected successfully to DB Server');
+    db = client.db(dbName);
+  } catch (e) {
+    console.log(e);
+    console.log('Error while connecting to MongoDB.');
+  }
 }
 
 function getDatabaseConnection() {
-    return db;
+  return db;
 }
 
 // main(); For next dev phase enable this
 
-export { getDatabaseConnection }
+export { getDatabaseConnection };

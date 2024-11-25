@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 const walletAddress = 'na';
 const privateKey = {
   key1: 'use your key here',
-  key2: 'wdwd',
+  key2: 'wdwd'
 };
 
 const transactionId = 'your_transaction_id_here';
@@ -15,9 +15,9 @@ async function testFetchDataset() {
     const response = await fetch(backendUrl, {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ transactionId }),
+      body: JSON.stringify({ transactionId })
     });
 
     const textResponse = await response.text();

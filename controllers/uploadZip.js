@@ -1,18 +1,27 @@
 import mine from '../arlocal/mine.js';
 import arweave from '../arweave.js';
-import testWallet from '../arlocal/testWallet.json' with { type: "json" };
+import testWallet from '../arlocal/testWallet.json' with { type: 'json' };
 // import { getDatabaseConnection } from "../database/connect.js"
 
 const uploadZip = async (req, res) => {
-
   if (!req.file) {
     return res.status(400).send('No file uploaded.');
   }
 
-  let { walletAddress, field_of_study, domain, method, is_data_clean, dataset_name } = req.body;
+  let {
+    walletAddress,
+    field_of_study,
+    domain,
+    method,
+    is_data_clean,
+    dataset_name
+  } = req.body;
 
   if (!walletAddress) {
-    return res.status(400).json({ message: 'Wallet address, private key, and field_of_study, domain, method, is_data_clean, dataset_name are required.' });
+    return res.status(400).json({
+      message:
+        'Wallet address, private key, and field_of_study, domain, method, is_data_clean, dataset_name are required.'
+    });
   }
 
   try {
@@ -21,19 +30,27 @@ const uploadZip = async (req, res) => {
 
     const arweaveKey = testWallet.privateKey;
 
-    const transaction = await arweave.createTransaction({ data: req.file.buffer }, arweaveKey);
+    const transaction = await arweave.createTransaction(
+      { data: req.file.buffer },
+      arweaveKey
+    );
     await mine();
-    console.log("created tx")
+    console.log('created tx');
     console.log(`Transaction data size: ${transaction.data_size}`);
 
-
     if (parseInt(walletBalance) < parseInt(transaction.reward)) {
-      const requiredFunds = parseInt(transaction.reward) - parseInt(walletBalance)
-      console.log('Insufficient balance. Minting tokens... difd', requiredFunds);
-      await fetch(`http://localhost:1984/mint/${walletAddress}/${requiredFunds}`, { method: 'GET' });
+      const requiredFunds =
+        parseInt(transaction.reward) - parseInt(walletBalance);
+      console.log(
+        'Insufficient balance. Minting tokens... difd',
+        requiredFunds
+      );
+      await fetch(
+        `http://localhost:1984/mint/${walletAddress}/${requiredFunds}`,
+        { method: 'GET' }
+      );
       console.log('Minted tokens successfully.');
     }
-
 
     // Add required metadata as transaction tags
     transaction.addTag('Content-Type', req.file.mimetype);
@@ -45,7 +62,7 @@ const uploadZip = async (req, res) => {
     transaction.addTag('Is-Data-Clean', is_data_clean.toString());
     transaction.addTag('Dataset-Name', dataset_name);
 
-    console.log(transaction)
+    console.log(transaction);
     await arweave.transactions.sign(transaction, arweaveKey);
     // // Upload the transaction to the Arweave network
     // const uploader = await arweave.transactions.getUploader(transaction);
@@ -69,9 +86,12 @@ const uploadZip = async (req, res) => {
     // });
 
     res.status(arweaveResponse.status).json({
-      message: arweaveResponse.status !== 200 ? 'Some error occured while uploading to Arweave.': 'Dataset successfully uploaded to Arweave.',
+      message:
+        arweaveResponse.status !== 200
+          ? 'Some error occured while uploading to Arweave.'
+          : 'Dataset successfully uploaded to Arweave.',
       arweaveUrl: `https://localhost:1984/${transaction.id}`,
-      status: arweaveResponse.status,
+      status: arweaveResponse.status
     });
   } catch (error) {
     console.error('Error uploading dataset:', error);
