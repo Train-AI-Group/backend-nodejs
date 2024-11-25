@@ -1,5 +1,5 @@
-import multer from 'multer';
-import path from 'path';
+import multer from "multer";
+import path from "path";
 
 // Set up multer storage
 const storage = multer.memoryStorage();
@@ -9,11 +9,11 @@ const upload = multer({
   storage: storage,
   fileFilter: (req, file, cb) => {
     const ext = path.extname(file.originalname).toLowerCase();
-    if (ext !== '.zip') {
-      return cb(new Error('Only ZIP files are allowed'), false);
+    if (ext !== ".zip") {
+      return cb(new Error("Only ZIP files are allowed"), false);
     }
     cb(null, true);
-  }
+  },
 });
 
-export default upload
+export default upload;
