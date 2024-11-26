@@ -10,7 +10,7 @@ function CalReward(tags)
       ["Education"] = 4
     },
     domains = {
-      ["Computer Vision"] = 5,
+      ["CV"] = 5,
       ["NLP"] = 5
     },
     tasksOrMethods = {
