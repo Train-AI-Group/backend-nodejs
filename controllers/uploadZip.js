@@ -1,7 +1,7 @@
 import mine from '../arlocal/mine.js';
 import arweave from '../arweave.js';
 import testWallet from '../arlocal/testWallet.json' with { type: "json" };
-// import { getDatabaseConnection } from "../database/connect.js"
+import { getDatabaseConnection } from "../database/connect.js"
 
 const uploadZip = async (req, res) => {
 
@@ -59,14 +59,14 @@ const uploadZip = async (req, res) => {
     console.log(`Transaction ID: ${transaction.id}`);
     console.log(`Transaction status: ${arweaveResponse.status}`);
 
-    // const dbConnection = getDatabaseConnection();
-    // const transactionsCollection = dbConnection.collection("transactions");
-    // const { acknowledged, insertedId } = await transactionsCollection.insertOne({ transaction_id: transaction.id, field_of_study, domain, method, is_data_clean, dataset_name })
-    // console.log(acknowledged, insertedId);
+    const dbConnection = getDatabaseConnection();
+    const transactionsCollection = dbConnection.collection("transactions");
+    const { acknowledged, insertedId } = await transactionsCollection.insertOne({ transaction_id: transaction.id, time: new Date() })
+    console.log('db', acknowledged, insertedId);
 
-    // if (!acknowledged) return res.status(500).send({
-    //   error: 'Failed to add transaction to DB',
-    // });
+    if (!acknowledged) return res.status(500).send({
+      error: 'Failed to add transaction to DB',
+    });
 
     res.status(arweaveResponse.status).json({
       message: arweaveResponse.status !== 200 ? 'Some error occured while uploading to Arweave.': 'Dataset successfully uploaded to Arweave.',
