@@ -25,6 +25,6 @@ function getDatabaseConnection() {
     return db;
 }
 
-// main(); For next dev phase enable this
+main();
 
 export { getDatabaseConnection }
